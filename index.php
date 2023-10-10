@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <title>Formular</title>
@@ -28,7 +28,7 @@
           $statement = $pdo->prepare("INSERT INTO kunde (name, vorname, adresse, email) VALUES (?, ?, ?,?)");
           $statement->execute(array($name,$vorname,$adresse,$email));   
           $neue_id = $pdo->lastInsertId();
-          print("Neuer Nutzer mit ID $neue_id angelegt");
+          print("<br />Neuer Nutzer mit ID $neue_id angelegt");
 
         } else {
           print("Verbindung gescheitert");
